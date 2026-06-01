@@ -11,11 +11,20 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #1f2937;
       background: #f8fafc;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .container {
@@ -64,6 +73,38 @@
       font-size: 16px;
       color: #475569;
       max-width: 680px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid #0f172a;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .button.secondary {
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
     }
 
     .contact-card,
@@ -178,6 +219,10 @@
       padding: 55px 0;
     }
 
+    footer h2 {
+      color: #ffffff;
+    }
+
     footer p {
       color: #cbd5e1;
       margin-top: 14px;
@@ -187,6 +232,11 @@
       margin-top: 24px;
       color: #cbd5e1;
       font-size: 14px;
+    }
+
+    .footer-contact a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     @media (max-width: 800px) {
@@ -216,12 +266,17 @@
         <p class="intro">
           An anonymized professional work portfolio showcasing experience in healthcare administration, medical virtual assistance, quality assurance, and allied health administrative support.
         </p>
+
+        <div class="button-group">
+          <a class="button primary" href="#contact">Contact Me</a>
+          <a class="button secondary" href="#work-samples">View Work Samples</a>
+        </div>
       </div>
 
       <div class="contact-card">
         <p><strong>Location:</strong> Cebu, Philippines</p>
         <p><strong>Phone:</strong> +63 960 349 8838</p>
-        <p><strong>Email:</strong> vinzylmaeparba@gmail.com</p>
+        <p><strong>Email:</strong> <a href="mailto:vinzylmaeparba@gmail.com">vinzylmaeparba@gmail.com</a></p>
         <div class="note">
           Portfolio content is anonymized and does not include confidential patient names, private case information, screenshots, or proprietary templates.
         </div>
@@ -256,7 +311,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="work-samples">
     <div class="container">
       <p class="eyebrow">Anonymized Work Samples</p>
       <h2>Workflow Areas</h2>
@@ -352,12 +407,12 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="contact">
     <div class="container">
       <h2>Available for Medical VA, Healthcare Admin, QA, and Allied Health Support Roles</h2>
       <p>I bring organized, accurate, and confidential support for healthcare documentation, scheduling, database tracking, and quality assurance workflows.</p>
       <div class="footer-contact">
-        vinzylmaeparba@gmail.com | +63 960 349 8838 | Cebu, Philippines
+        <a href="mailto:vinzylmaeparba@gmail.com">vinzylmaeparba@gmail.com</a> | +63 960 349 8838 | Cebu, Philippines
       </div>
     </div>
   </footer>
